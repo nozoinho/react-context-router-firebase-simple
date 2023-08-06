@@ -3,6 +3,7 @@ import { login } from "../config/firebase";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import { useRedirectActiveUser } from "../hooks/useRedirectActiveUser";
+import { Formik } from "formik";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -37,6 +38,8 @@ const Login = () => {
   return (
     <>
       <h1>Login</h1>
+
+      <Formik></Formik>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
